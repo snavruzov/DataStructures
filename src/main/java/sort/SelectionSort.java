@@ -10,7 +10,7 @@ import java.util.Arrays;
  */
 public class SelectionSort implements SortAlgorithm
 {
-    private Integer arr[];
+    private Integer[] arr;
 
     public SelectionSort()
     {
@@ -26,7 +26,7 @@ public class SelectionSort implements SortAlgorithm
     {
         Integer size = arr.length;
         Integer J = 0;
-        int tmp = 0;
+        Integer tmp = 0;
         for (int I = 0; I < size; I++)
         {
             J = I;
@@ -37,8 +37,8 @@ public class SelectionSort implements SortAlgorithm
                     J = K;
                 }
             }
-            tmp = arr[I];
-            arr[I] = arr[I];
+            tmp = arr[J];
+            arr[J] = arr[I];
             arr[I] = tmp;
         }
 
